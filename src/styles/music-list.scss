@@ -1,0 +1,54 @@
+.musiclist-container {
+  margin-top: 10px;
+  color: wheat;
+  z-index: 99;
+  position: relative;
+  max-width: 350px;
+  height: 55vh;
+  background: linear-gradient(to bottom, #26193c, #26193c);
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 0.1px,
+    rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px,
+    rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+  border-radius: 4%;
+  padding: 30px;
+  .song-list {
+    display: flex;
+    padding: 10px 8px;
+    cursor: pointer;
+    align-items: center;
+    &.active {
+      background: linear-gradient(
+        90deg,
+        rgba(90, 63, 136, 0.705) 0%,
+        rgba(38, 25, 60, 1) 90%
+      );
+    }
+    border-radius: 500px;
+    .song-avatar {
+      height: 50px;
+      width: 50px;
+
+      img {
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+        border-radius: 50%;
+      }
+    }
+    .text-wrapper {
+      margin-left: 20px;
+      text-align: left;
+      .song-title {
+        color: #c3bdcb;
+        font-size: 14px;
+      }
+      .artist {
+        color: #c3bdcb;
+        font-size: 12px;
+      }
+    }
+  }
+  @media only screen and (max-width: 760px) {
+    max-width: auto;
+  }
+}
